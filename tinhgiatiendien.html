@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <table>
+            <input type="number" id="a" placeholder="Nhập a">
+            <button onclick="check()">Thành tiền</button>
+            <h3>giá tiền điện</h3>
+            <div id="result">Hiện kết quả</div>
+        </table>
+        <script>
+            function check(){
+                let a= document.getElementById("a").value;
+
+                if( a > 0 && a <= 50 )
+                { result = a*1.678;
+                    document.getElementById("result").innerHTML= "Tiền điện là" + result + " " + "VNĐ";
+               
+            }else if ( a <= 51 && a <= 100){
+                result = a*1.734;
+            document.getElementById("result").innerHTML= "Tiền điện là" + result + " " + "VNĐ";
+        } else (a <= 101 && a <= 200)
+        {
+            result = a*2.014;
+            document.getElementById("result").innerHTML= "Tiền điện là" +" " + result + " " + "VNĐ";
+        }
+                    
+        }
+        </script>
+    </table>
+</body>
+</html>
